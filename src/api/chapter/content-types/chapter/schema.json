@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "scenes",
+  "collectionName": "chapters",
   "info": {
-    "singularName": "scene",
-    "pluralName": "scenes",
-    "displayName": "Scene"
+    "singularName": "chapter",
+    "pluralName": "chapters",
+    "displayName": "Chapter"
   },
   "options": {
     "draftAndPublish": true
@@ -18,11 +18,14 @@
       "type": "uid",
       "targetField": "title"
     },
-    "chapters": {
+    "scene": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::chapter.chapter",
-      "mappedBy": "scene"
+      "relation": "manyToOne",
+      "target": "api::scene.scene",
+      "inversedBy": "chapters"
+    },
+    "order": {
+      "type": "integer"
     }
   }
 }
