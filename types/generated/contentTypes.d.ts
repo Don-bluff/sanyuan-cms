@@ -384,6 +384,10 @@ export interface ApiChapterChapter extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    contentblocks: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::contentblock.contentblock'
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -417,6 +421,7 @@ export interface ApiContentblockContentblock
   };
   attributes: {
     body: Schema.Attribute.Blocks;
+    chapter: Schema.Attribute.Relation<'manyToOne', 'api::chapter.chapter'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

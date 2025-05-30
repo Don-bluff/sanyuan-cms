@@ -22,6 +22,12 @@
     },
     "order": {
       "type": "integer"
+    },
+    "chapter": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::chapter.chapter",
+      "inversedBy": "contentblocks"
     }
   }
 }

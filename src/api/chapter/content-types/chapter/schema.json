@@ -26,6 +26,12 @@
     },
     "order": {
       "type": "integer"
+    },
+    "contentblocks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::contentblock.contentblock",
+      "mappedBy": "chapter"
     }
   }
 }
