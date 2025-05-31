@@ -28,6 +28,9 @@
       "relation": "manyToOne",
       "target": "api::chapter.chapter",
       "inversedBy": "contentblocks"
+    },
+    "isPremium": {
+      "type": "boolean"
     }
   }
 }
