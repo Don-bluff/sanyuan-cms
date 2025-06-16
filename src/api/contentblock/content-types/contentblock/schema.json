@@ -4,7 +4,7 @@
   "info": {
     "singularName": "contentblock",
     "pluralName": "contentblocks",
-    "displayName": "contentblock"
+    "displayName": "Contentblock"
   },
   "options": {
     "draftAndPublish": true
@@ -30,6 +30,9 @@
       "inversedBy": "contentblocks"
     },
     "isPremium": {
+      "type": "boolean"
+    },
+    "isPin": {
       "type": "boolean"
     }
   }

@@ -412,7 +412,7 @@ export interface ApiContentblockContentblock
   extends Struct.CollectionTypeSchema {
   collectionName: 'contentblocks';
   info: {
-    displayName: 'contentblock';
+    displayName: 'Contentblock';
     pluralName: 'contentblocks';
     singularName: 'contentblock';
   };
@@ -425,6 +425,7 @@ export interface ApiContentblockContentblock
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    isPin: Schema.Attribute.Boolean;
     isPremium: Schema.Attribute.Boolean;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
