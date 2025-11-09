@@ -425,6 +425,7 @@ export interface ApiContentblockContentblock
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    isEng: Schema.Attribute.Boolean;
     isPin: Schema.Attribute.Boolean;
     isPremium: Schema.Attribute.Boolean;
     locale: Schema.Attribute.String & Schema.Attribute.Private;

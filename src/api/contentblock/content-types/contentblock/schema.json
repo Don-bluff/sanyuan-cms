@@ -34,6 +34,9 @@
     },
     "isPin": {
       "type": "boolean"
+    },
+    "isEng": {
+      "type": "boolean"
     }
   }
 }
